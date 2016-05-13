@@ -67,7 +67,7 @@ function sumArray(testArray){
   for (var i = 0; i < testArray.length; i++){
     sum = sum + testArray[i];
   }
-  sumMessage = testArray + ' was passed in as an array of numbers, and ' + sum + ' is their sum.';
+  var sumMessage = testArray + ' was passed in as an array of numbers, and ' + sum + ' is their sum.';
   return [sum, sumMessage];
 }
 
@@ -84,10 +84,17 @@ Write a function called multiplyArray() that takes an array of numbers as its ar
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(testArray){}
+var product = 1;
+function multiplyArray(testArray){
+  for (var i = 0; i < testArray.length; i++){
+    product = product * testArray[i];
+  }
+  var productMessage = 'The numbers ' + testArray + ' have a product of ' + product + '.';
+  return [product, productMessage];
+}
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Submit the link to the repo via Canvas.
 
