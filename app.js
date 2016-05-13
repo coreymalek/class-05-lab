@@ -61,13 +61,19 @@ Write a function called sumArray() that takes in an array of numbers as its argu
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-testArray = [2,3,4];
-
-function sumArray(testArray){}
+var testArray = [2,3,4];
+var sum = 0;
+function sumArray(testArray){
+  for (var i = 0; i < testArray.length; i++){
+    sum = sum + testArray[i];
+  }
+  sumMessage = testArray + ' was passed in as an array of numbers, and ' + sum + ' is their sum.';
+  return [sum, sumMessage];
+}
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(2,3,4);
+testSumArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don't forget to create a new branch for your work on the next question!
 
